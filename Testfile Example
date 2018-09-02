@@ -1,0 +1,18 @@
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
+
+
+module('Unit | Component | people-list', function(hooks) {
+  setupTest(hooks);
+  test('Test add function', function(assert) {
+    assert.expect(2);
+    let component = this.owner.lookup('component:people-list');
+    component.send('add',5)
+    assert.equal(component.get('value'), 15);
+
+    assert.equal(component.get('val'), 20);
+    // assert.equal(value,15);
+  });
+
+});
+
